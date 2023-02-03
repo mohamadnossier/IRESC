@@ -1,0 +1,14 @@
+Package: IRESC
+Type: Package
+Title: Clustering performance evaluation in single cell RNA-seq 
+Version: 0.1.0
+Author: Mohamad Nossier
+Maintainer: Mohamad Nossier <mohamad.nossier@cis.asu.edu.eg>
+Description: IRESC is a package for evaluating clustering performance in scRNA-seq
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Depends: R (<= 4.2)
+Imports: igraph, ggplot2, tibble, reshape2, aricode, ggalluvial, viridis
+Suggests: FEAST, SC3, SEURAT, SingleCellExperiment
+RoxygenNote: 7.2.3
