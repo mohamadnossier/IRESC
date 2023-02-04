@@ -43,45 +43,6 @@ longFormat <- function(dfList){
 } # end function
 
 
-
-#' Sankey diagram
-#'
-#' @name sankey.diagram
-#' @param confusioMatrix confusion matrix
-#' @param path file path to save sankey diagram in a .html format
-#' @import networkD3
-#' @import tidyverse
-#' @import hrbrthemes
-#' @import tidyr
-sankey.diag <- function(confusionMatrix, path){
-
-  skFormat <- confusionMatrix %>%
-    rownames_to_column %>%
-    gather(key = 'key', value = 'value', -rowname)
-
-  colnames(skFormat) <- c("source", "target", "value")
-  skFormat$target <- paste(skFormat$target, " ", sep="")
-
-  # list all entities in the flow diagram (source and target)
-  nodes <- data.frame(name=c(as.character(skFormat$source), as.character(skFormat$target)) %>% unique())
-
-  # with networkD3, connection must be provided using id, not using real name like in the links dataframe.. So we need to reformat it.
-  skFormat$IDsource=match(skFormat$source, nodes$name)-1
-  skFormat$IDtarget=match(skFormat$target, nodes$name)-1
-
-  # un-comment to activate the color palette
-  #ColourScal ='d3.scaleOrdinal() .range(["#FDE725FF","#B4DE2CFF","#6DCD59FF","#35B779FF","#1F9E89FF","#26828EFF","#31688EFF","#3E4A89FF","#482878FF","#440154FF"])'
-
-  # create the Network (default palette)
-  sk <- sankeyNetwork(Links = skFormat, Nodes = nodes,
-                      Source = "IDsource", Target = "IDtarget",
-                      Value = "value", NodeID = "name",
-                      sinksRight=FALSE,  nodeWidth=40, fontSize=13, nodePadding=20)
-
-  saveNetwork(sk, path)
-} # end function
-
-
 #' @importFrom ggplot2 theme element_blank element_text scale_fill_manual labs coord_fixed
 
 
