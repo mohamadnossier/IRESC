@@ -106,9 +106,9 @@ measurePerformance <- function(pn){
 bench_process <- function(labels, clusters, prf.metrics){
 
   # calculate adjust rand index
-  ari <- aricode::ARI(labels, clusters)
+  ari <- ARI(labels, clusters)
   #calculate normalized mutual index
-  nmi <- aricode::NMI(labels, clusters)
+  nmi <- NMI(labels, clusters)
 
   prf <- data.frame(prf.metrics[,"Average"])
   prf[6:7,] <- c(ari, nmi)
