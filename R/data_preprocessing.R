@@ -20,7 +20,6 @@ library(FEAST)
 #' # extract processed counts
 #' processedCounts <- counts(sce)
 #' }
-#' @import scater
 #' @import SingleCellExperiment
 #' @importFrom FEAST process_Y
 preprocess <- function(datMatrix){
