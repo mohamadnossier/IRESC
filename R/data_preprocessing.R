@@ -6,7 +6,6 @@
 #counts(sce) <- normcounts(sce)
 
 # Packages:
-#library(scater)
 library(FEAST)
 
 #' Pre-processing

@@ -52,7 +52,6 @@ longFormat <- function(dfList){
 #' @import networkD3
 #' @import tidyverse
 #' @import hrbrthemes
-#' @import circlize
 #' @import tidyr
 sankey.diag <- function(confusionMatrix, path){
 
