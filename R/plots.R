@@ -1,10 +1,6 @@
 
 # Themes and plots -----------------------------------
 
-# Packages:
-library(ggplot2)
-library(reshape2)
-
 #a color palette
 gg_bxpalette <- c("#D0D0D0", "#969696",
                 "#808080", "#5F5F5F", "#4D4D4D")
@@ -46,7 +42,7 @@ longFormat <- function(dfList){
 #' @importFrom ggplot2 theme element_blank element_text scale_fill_manual labs coord_fixed
 
 
-#' Construct alluvial flow diagram
+#' Build alluvial flow diagram
 #'
 #' @name alluvial_flow.plot
 #' @param datMatrix jaccard indecies matrix
