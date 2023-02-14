@@ -101,7 +101,6 @@ measurePerformance <- function(pn){
 #' @param labels data ground truth labels
 #' @param clusters resulted clusters
 #' @return benchmark barplot fig
-#' @importFrom aricode ARI, NMI
 #' @export
 bench_process <- function(labels, clusters, prf.metrics){
 

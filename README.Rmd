@@ -1,6 +1,5 @@
 ---
 title: "README"
-output: html_document
 date: "2023-02-03"
 ---
 
@@ -35,7 +34,8 @@ The pre-processing step involves the following: - Filter ERCC spike-in genes - F
 
 Before Pre-processing
 
-Number of genes: 22088 Number of cells: 466
+* Number of genes: 22088
+* Number of cells: 466
 
 ```{r, echo=T, eval=F, tidy=T}
 processed <- preprocess(counts)
@@ -44,7 +44,8 @@ processed <- preprocess(counts)
 
 After Pre-processing
 
-Number of genes: 18042 Number of cells: 466
+* Number of genes: 18042 
+* Number of cells: 466
 
 Normalization
 
