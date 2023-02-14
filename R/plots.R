@@ -39,9 +39,6 @@ longFormat <- function(dfList){
 } # end function
 
 
-#' @importFrom ggplot2 theme element_blank element_text scale_fill_manual labs coord_fixed
-
-
 #' Alluvial flow diagram
 #'
 #' @name alluvial_flow.plot
