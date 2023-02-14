@@ -42,7 +42,7 @@ longFormat <- function(dfList){
 #' @importFrom ggplot2 theme element_blank element_text scale_fill_manual labs coord_fixed
 
 
-#' Build alluvial flow diagram
+#' Alluvial flow diagram
 #'
 #' @name alluvial_flow.plot
 #' @param datMatrix jaccard indecies matrix
